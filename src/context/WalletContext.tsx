@@ -51,13 +51,13 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
         await window.ethereum.request({ method: 'eth_requestAccounts' });
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         
-        // Check if we're on the correct network (NeoX testnet)
+        // Check if we're on the correct network (Sepolia Testnet testnet)
         const network = await provider.getNetwork();
-        if (network.chainId !== 12227332) { // NeoX testnet chain ID
+        if (network.chainId !== 11155111) { // Sepolia Testnet testnet chain ID
           try {
             await window.ethereum.request({
               method: 'wallet_switchEthereumChain',
-              params: [{ chainId: '0xBA9304' }], // 12227332 in hexadecimal
+              params: [{ chainId: '0xaa36a7' }], // 11155111 in hexadecimal
             });
           } catch (switchError) {
             // Ensure switchError is an object with a code property
@@ -68,15 +68,15 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
                 await window.ethereum.request({
                   method: 'wallet_addEthereumChain',
                   params: [{
-                    chainId: '0xBA9304',
-                    chainName: 'NeoX Testnet',
+                    chainId: '0xaa36a7',
+                    chainName: 'Sepolia Testnet',
                     nativeCurrency: {
-                      name: 'GAS',
-                      symbol: 'GAS',
+                      name: 'ETH',
+                      symbol: 'ETH',
                       decimals: 18
                     },
-                    rpcUrls: ['https://neoxt4seed1.ngd.network/'],
-                    blockExplorerUrls: ['https://xt4scan.ngd.network/']
+                    rpcUrls: ['https://sepolia.infura.io/'],
+                    blockExplorerUrls: ['https://sepolia.etherscan.io/']
                   }],
                 });
               } else {

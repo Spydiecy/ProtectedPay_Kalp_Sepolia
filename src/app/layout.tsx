@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'ProtectedPay | Secure Crypto Transfers on NeoX',
-  description: 'Secure crypto transfers, group payments, and smart savings on the NeoX blockchain',
-  keywords: 'crypto, payments, blockchain, NeoX, DeFi, secure transfers, group payments',
+  title: 'ProtectedPay | Secure Crypto Transfers on Sepolia Testnet using kalp Studio',
+  description: 'Secure crypto transfers, group payments, and smart savings on the Sepolia Testnet using kalp Studio blockchain',
+  keywords: 'crypto, payments, blockchain, Sepolia Testnet using kalp Studio, DeFi, secure transfers, group payments',
   authors: [{ name: 'ProtectedPay' }],
 };
 
