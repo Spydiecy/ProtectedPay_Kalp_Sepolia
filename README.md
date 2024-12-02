@@ -89,6 +89,8 @@ Watch ProtectedPay in action:
 
 ## Smart Contract
 
+![image](https://github.com/user-attachments/assets/18f6917a-094e-4910-8f7d-65224abaf85f)
+
 Deployed on Sepolia Testnet using Kalp Studio:
 - Contract Address: 0xF887B4D3b17C12C86cc917cF72fb8881f866a847
 - Verified on Sepolia Testnet Explorer
